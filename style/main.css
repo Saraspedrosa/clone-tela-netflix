@@ -1,0 +1,135 @@
+:root{  /* root é um elemento necessário para declarar variável dentro do CSS*/ 
+    --vermelho:#E50914;
+    --preta:#141414;
+}
+
+/* RESET ajusta toda a margem do navegador*/
+*{  
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+
+/*elementos base*/
+body{
+   background: var(--preta); /*utilização da variável*/ 
+   font-family: 'Arial', Times, serif;
+   color:white;
+}
+
+
+header .container{
+    display:flex; /*alinha os elementos em tela*/ 
+    flex-direction: row; 
+    align-items: center; /*alinha os elementos dentro da caixa*/ 
+    justify-content: space-between; /*separa o elemento h2 do nav. um fica no canto esquerdo e outro no canto direito*/
+    
+}
+
+header .logo{ 
+    margin-left: 5px; /*margem para a esquerda*/
+    color: var(--vermelho); /*utilização da variável*/ 
+    font-family: 'Arial Black', Times; /* fonte principal é a primeira e a segunda serve de scap*/ 
+    font-size:40px;
+}
+
+header nav a{ 
+    text-decoration:none; /*retira as linhas debaixo do link*/ 
+    color:#AAA;
+    margin-right: 10px; /*margem de distancia entre cada link*/
+}
+
+
+header nav a:hover{ /*quando o mouse estiver em cima eu posso alterar cor, tamanho...*/ 
+    color:#fff;
+}
+
+/*filme principal*/
+.filme-principal{ 
+    font-size:16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/capa-house.jpg'); /*fiz a referencia de um arq de imagem no meu projeto*/
+    /*linear-gradient serve para adicionar uma camada de cor a imagem. ajuda na visualização do <p>*/
+    height:400px; /*aqui é o tamanho da caixa ou seja, tamanho da imagem que eu coloquei.*/ 
+    background-size:cover; /*pega a area de cobertura total*/
+ 
+
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; /*serve para alinhar os elementos no centro*/
+    align-items: flex-start; /*os elementos começam sempre da esquerda*/
+}
+
+
+.filme-principal .descricao{ /*formatação do parágrafo*/
+    margin-top: 10px; 
+    margin-bottom: 40px; /*distancia a descrição dos botoes*/
+}
+
+
+.filme-principal .titulo{
+    margin-top: 15%; /*posicionamento fluido é quando eu coloco em percentuais*/
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(0,0,0,.50);
+    border:none; /*tirando a borda padrão*/
+    color: white; 
+
+    padding:15px 30px; /*os valores são em sentido horário*/
+    margin-right: 15px; /*ajusta o espaçamento entre elementos*/
+    font-size: 12px;
+
+    cursor: pointer; /*quando passo o mouse é informado que é uma parte clicável*/
+    transition: .3s ease all; /*tempo de visualização do botão*/
+}
+
+.botao:hover{ /*serve para trocar as cores definidas da caixa e texto na hora que o usuário passar o mouse*/
+    background-color:white;
+    color:black;
+}
+
+.botao i{
+    margin-right: 8px; /*margem dada do id para o elemento*/
+}
+
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 70%; /*define o espaço do parágrafo quando a tela for redenrizada*/
+}
+
+.box-filme{ /*formatação das imagens do meu carrosel de filmes*/ 
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+
+.carrosel-filmes{ /*degruda os filmes*/ 
+    margin-top:5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

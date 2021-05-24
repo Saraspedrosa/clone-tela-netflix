@@ -1,0 +1,18 @@
+@media screen and (max-width:700px){  /*formatação disponível para até 700px*/
+    header .container{
+    display: flex; 
+    flex-direction: column; /*ele joga pra baixo sempre que a tela for diminuida*/
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+
+}
+
+@media screen and (min-width:1000px){
+    .descricao{
+        width: 50%;
+    }
+}
